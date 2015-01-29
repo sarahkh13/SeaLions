@@ -1,0 +1,148 @@
+# How many times will 'hello' be printed?
+# 1) for i in range(3, 17):
+    print 'hello'
+    
+This will print hello 14 times.
+
+    
+    
+# 2)
+for j in range(12):
+    if j % 3 == 0:
+￼￼￼￼￼￼￼￼￼￼10
+       print 'hello'
+       
+When you divide numbers in range 0-11 by 3
+(12 numbers, but by default starts at zero if unspecified), 
+it will print hello when remainder is zero. 
+0, 3, 6, 9 all have remainder zero when divided by 3, 
+so it will print hello 4 times. 
+
+        
+       
+# 3)
+for j in range(15):
+    if j % 5 == 3:
+       print 'hello'
+    elif j % 4 == 3:
+       print 'hello'
+       
+For numbers ranging 0-14, choose those that when you
+divide by 5 you get a remainder of 3. 
+Yields: 13, 8, 3 (3/5==> 0 remainder 3)   
+
+Then divide those numbers by 4 to get remainder 3:   
+0-13: 7, 11, 
+0-8: 7, 3
+0-3: 3      
+      
+It will print 5 hellos. 
+
+
+       
+       
+# 4)
+z=0
+while z != 15:
+print 'hello' 
+z=z+3
+
+
+Z assigned to zero. 
+While z differs from 15, print hello: prints hello for 0. 
+Then z+3 loops-->3, 6, 9, 12 (stops before 15) & prints hello for these. 
+
+It will print 5 hellos.
+
+
+
+
+# 5)
+z = 12
+while z < 100:
+    if z == 31:
+       for k in range(7):
+           print 'hello'
+    elif z == 18:
+		print 'hello' 
+	z=z+1
+
+
+Starts at z=12. 
+When z is less than 100: if it equals 31 go on (here 12, so no)
+Otherwise if it equals 18 print hello (not yet, still 12)
+Goes on and adds 1
+Keeps going until 18, prints hello. 
+Then adds 1, goes from 19 until 31, then gets to next subset-->
+for k in range(7), ie 0-6, print hello (7 total more hellos) 
+
+This will print 8 hellos. 
+
+
+
+
+
+# What does fooXX do?
+
+def foo1(x):
+    return x ** 0.5
+    
+This raises x to the 0.5 (square root). 
+
+    
+    
+def foo2(x, y): 
+	if x>y:
+￼￼     return x
+    return y
+
+If x if greater than y, it will return x & y (holds them in memory).  
+If not then it won't return anything. 
+
+
+
+    
+def foo3(x, y, z):
+	if x > y:
+		tmp = y 
+		y=x
+		x = tmp
+	if y > z: 
+		tmp = z
+	    z=y
+	    y = tmp 
+	if x > y:
+		tmp = y 
+		y=x
+		x = tmp
+	return [x, y, z]
+￼￼￼
+
+Puts the values into order (smaller to larger)
+
+
+
+def foo4(x):
+    result = 1
+    for i in range(1, x + 1):
+       result = result * i
+    return result
+
+Turns the value into a factorial. 
+
+
+    
+    
+    
+# This is a recursive function
+# meaning that the function calls itself
+# read about it at
+# en.wikipedia.org/wiki/Recursion_(computer_science)
+
+
+def foo5(x):
+    if x == 1:
+       return 1
+	return x * foo5(x - 1)    
+	
+Turns the value into a factorial. 
